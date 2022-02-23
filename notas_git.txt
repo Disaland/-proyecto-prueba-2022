@@ -13,3 +13,21 @@ Y nos aparece que un nuevo archivo, ahora vamos a agregar todos los demás archi
 $ git add . 
 ó
 $ git add -A
+Una vez que estén todos los archivos agregados vamos a intentar hacer un commit:
+$ git commit
+Nos dice que tenemos que configurar nuesto entorno, le decimos quienes somos nosotros, lo configuramos
+$ git config --global user.email "bonjour.cezar@gmail.com" (se puede volver a configurar cuando sea)
+$ git config --global user.name "Cezar" (se puede volver a configurar cuando sea)
+Si le volvemos a dar commit y nos abrirá el notepad++ o el vi. Escribimos un mensaje hasta arriba, guardamos y cerramos.
+Una vez que se cierre el archivo se hará automáticamente el commit.
+Vemos lo que llevamos de comits con git log.
+$ git log
+Nos aparecerá el hash en amarillo, que es una manera de poder diferencias cada commit, nos aparece el autor, usario, email, hora y fecha y el comentario.
+Si le damos otra vez git status, vemos que no hay nada para hacer commit (bueno, aquí tengo la nota)
+$ git status
+Si modificamos un poco el html, vemos que index.html ha sido modificado e incluso nos aparece que usemos git restore, para deshacer los cambios.
+Vamos a regresar a una vesión anterior:
+$ git checkout -- index.html (y nos regresa el archivo como estaba antes).
+Si le volvemos a dar git status, nos dice nuevamente que no hay cambios.
+Ahora, si editamos el archivo y queremos ver qué cambió desde la última vez, basta con hacer 
+$ git diff index.html
