@@ -1,0 +1,15 @@
+1. puede ser clic derecho y abrir con Git o abrir la consola, e ir hasta el proyecto
+2. luego git init dentro de la carpeta para inicializar el proyecto:
+$ git init
+Se crea una carpeta oculta de git.
+Vemos cómo estamos y con qué archivos estamos trabajando, los commits que hay con git status:
+$ git status
+Nos dice que hay archivos que no estamos siguiendo, es decir que están en el aire pues aún no los hemos agregado al entorno de trabajo.
+Agregamos un archivos
+$ git add app.js
+Volvemos a ver el estado:
+$ git status
+Y nos aparece que un nuevo archivo, ahora vamos a agregar todos los demás archivos con
+$ git add . 
+ó
+$ git add -A
